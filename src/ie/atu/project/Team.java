@@ -1,6 +1,7 @@
 package ie.atu.project;
 
 public class Team {
+    // variables
     private String teamName;
     private String country;
     private int foundYear;
@@ -19,6 +20,11 @@ public class Team {
     public void setCountry(String country) { this.country = country;}
 
     public int getFoundedYear() {return foundYear; }
-    public void setFoundedYear(String foundYear) { this.foundYear = foundYear;}
+    public void setFoundedYear(int foundYear) { this.foundYear = foundYear;}
+
+    //output
+    public String toString() {
+        return "Team Name: " + teamName + ", Country: " + country + ", Founded: " + foundYear;
+    }
 
 }
