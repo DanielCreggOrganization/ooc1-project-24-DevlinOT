@@ -8,6 +8,28 @@ public class SoccerTeam extends Team{
     private boolean isChampion;
     private float teamBudget;
 
-    
+    public SoccerTeam(String teamName, String country, int foundedYear, int numberOfPlayers, String league, String coachName, boolean isChampion, float teamBudget) {
+        super(teamName, country, foundedYear);
+        this.numberOfPlayers = numberOfPlayers;
+        this.league = league;
+        this.coachName = coachName;
+        this.isChampion = isChampion;
+        this.teamBudget = teamBudget;
+    }
 
+    //getters and setters
+    public int getNumberOfPlayers() { return numberOfPlayers; }
+    public void setNumberOfPlayers(int numberOfPlayers) {this.numberOfPlayers = numberOfPlayers;}
+
+    public String getLeague() { return league; }
+    public void setLeague(String league) { this.league = league; }
+
+    public String getCoachName() { return coachName; }
+    public void setCoachName(String coachName) { this.coachName = coachName; }
+
+    public boolean isChampion() { return isChampion; }
+    public void setChampion(boolean champion) { isChampion = champion; }
+    
+    public float getTeamBudget() { return teamBudget; }
+    public void setTeamBudget(float teamBudget) { this.teamBudget = teamBudget; }
 }
