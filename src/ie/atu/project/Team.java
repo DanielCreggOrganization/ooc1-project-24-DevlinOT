@@ -1,6 +1,6 @@
 package ie.atu.project;
 
-public class Team {
+public abstract class Team {
     // variables
     private String teamName;
     private String country;
@@ -22,7 +22,11 @@ public class Team {
     public int getFoundedYear() {return foundYear; }
     public void setFoundedYear(int foundYear) { this.foundYear = foundYear;}
 
+     // Abstract method
+     public abstract double calculateTeamStrength();
+
     //output
+    @Override
     public String toString() {
         return "Team Name: " + teamName + ", Country: " + country + ", Founded: " + foundYear;
     }
