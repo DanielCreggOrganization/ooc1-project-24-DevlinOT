@@ -32,4 +32,16 @@ public class SoccerTeam extends Team{
     
     public float getTeamBudget() { return teamBudget; }
     public void setTeamBudget(float teamBudget) { this.teamBudget = teamBudget; }
+
+     // Implement abstract method
+     @Override
+     public double calculateTeamStrength() {
+         return numberOfPlayers * (isChampion ? 1.5 : 1.0) + teamBudget / 10;
+     }
+
+     @Override
+    public String toString() {
+        return super.toString() + ", League: " + league + ", Coach: " + coachName + 
+               ", Champion: " + isChampion + ", Budget: $" + teamBudget + "M";
+    }
 }
