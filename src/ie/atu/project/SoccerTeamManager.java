@@ -28,4 +28,11 @@ public class SoccerTeamManager {
         return null;
     }
 
+    // list all teams
+    public void listAllTeams() {
+        for(SoccerTeam team : teams){
+            System.out.println(team);
+        }
+    }
+
 }
