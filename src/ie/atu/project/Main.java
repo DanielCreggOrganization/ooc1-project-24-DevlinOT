@@ -12,7 +12,7 @@ public class Main {
         System.out.println("1. Add Soccer Team");
         System.out.println("2. Delete Soccer Team");
         System.out.println("3. List All Teams");
-        System.out.println("4. Find Team by Nam");
+        System.out.println("4. Find Team by Name");
         System.out.println("5. Count Total Teams");
         System.out.println("6. Exit");
 
@@ -60,9 +60,22 @@ public class Main {
                         System.out.println("Team not found.");
                     }
                     
+        }else if(choice == 3){
+            System.out.println("Listing all teams:");
+            manager.listAllTeams();
+        }else if(choice == 4){
+            System.out.print("Enter team name to find: ");
+            String findName = scanner.next();
+            SoccerTeam foundTeam = manager.findTeam(findName);
+            if (foundTeam != null) {
+                System.out.println("Team found: " + foundTeam);
+            } else {
+                System.out.println("Team not found.");
+            }
+        }
 
-    }
 }
 
 }
 }
+
