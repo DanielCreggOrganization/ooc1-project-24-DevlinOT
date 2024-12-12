@@ -19,6 +19,13 @@ public class SoccerTeamManager {
     }
 
     //find teams
-    public
+    public SoccerTeam findTeam(String teamName){
+        for(SoccerTeam team : teams){
+            if (team.getTeamName().equalsIgnoreCase(teamName)){
+                return team;
+            }
+        }
+        return null;
+    }
 
 }
