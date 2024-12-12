@@ -9,7 +9,7 @@ public class SoccerTeamManager {
         teams.add(team);
     }
     // deleting a team
-    public boolean deleteTem(String teamName){
+    public boolean deleteTeam(String teamName){
         return teams.removeIf(team -> team.getTeamName().equalsIgnoreCase(teamName));
     }
 

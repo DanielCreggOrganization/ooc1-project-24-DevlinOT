@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args){
         SoccerTeamManager manager = new SoccerTeamManager();
         Scanner scanner = new Scanner(System.in);
-    }
+    
 
     while (true) {
         System.out.println("\nMenu");
@@ -20,13 +20,12 @@ public class Main {
         int choice = scanner.nextInt();
         
 
-        switch (choice) {
-            case 1:
+        if(choice == 1) {
             System.out.print("Enter team name: ");
-            String name = scanner.nextLine();
+            String name = scanner.next();
 
             System.out.print("Enter country: ");
-            String country = scanner.nextLine();
+            String country = scanner.next();
             
             System.out.print("Enter Founded year: ");
             int year = scanner.nextInt();
@@ -35,10 +34,10 @@ public class Main {
             int players = scanner.nextInt();
 
             System.out.print("Enter league: ");
-            String league = scanner.nextLine();
+            String league = scanner.next();
 
             System.out.print("Enter coach name: ");
-            String coach = scanner.nextLine();
+            String coach = scanner.next();
 
             System.out.print("Is the team a champion? (true/false): ");
             boolean champion = scanner.nextBoolean();
@@ -47,12 +46,23 @@ public class Main {
             float budget = scanner.nextFloat();
 
             SoccerTeam team = new SoccerTeam(name, country, year, players, league, coach, champion, budget);
-            SoccerTeamManager.addTeam(team);
+            manager.addTeam(team);
             System.out.println("Team added");
-            break;
+           
 
 
-        }
+        }else if(choice == 2) {
+            System.out.print("Enter team name to delete: ");
+                    String deleteName = scanner.next();
+                    if (manager.deleteTeam(deleteName)) {
+                        System.out.println("Team deleted successfully!");
+                    } else {
+                        System.out.println("Team not found.");
+                    }
+                    
+
     }
+}
 
+}
 }
