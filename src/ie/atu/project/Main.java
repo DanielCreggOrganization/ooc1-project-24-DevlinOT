@@ -18,7 +18,41 @@ public class Main {
 
         System.out.print("Choose an option: ");
         int choice = scanner.nextInt();
-        scanner.nextLine(); 
+        
+
+        switch (choice) {
+            case 1:
+            System.out.print("Enter team name: ");
+            String name = scanner.nextLine();
+
+            System.out.print("Enter country: ");
+            String country = scanner.nextLine();
+            
+            System.out.print("Enter Founded year: ");
+            int year = scanner.nextInt();
+
+            System.out.print("Enter number of players: ");
+            int players = scanner.nextInt();
+
+            System.out.print("Enter league: ");
+            String league = scanner.nextLine();
+
+            System.out.print("Enter coach name: ");
+            String coach = scanner.nextLine();
+
+            System.out.print("Is the team a champion? (true/false): ");
+            boolean champion = scanner.nextBoolean();
+
+            System.out.print("Enter team budget (in millions): ");
+            float budget = scanner.nextFloat();
+
+            SoccerTeam team = new SoccerTeam(name, country, year, players, league, coach, champion, budget);
+            SoccerTeamManager.addTeam(team);
+            System.out.println("Team added");
+            break;
+
+
+        }
     }
 
 }
