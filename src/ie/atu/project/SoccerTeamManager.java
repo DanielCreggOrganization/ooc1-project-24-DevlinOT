@@ -8,7 +8,17 @@ public class SoccerTeamManager {
     public void addTeam(SoccerTeam team) {
         teams.add(team);
     }
+    // deleting a team
+    public boolean deleteTem(String teamName){
+        return teams.removeIf(team -> team.getTeamName().equalsIgnoreCase(teamName));
+    }
 
-    public boolean 
+    // counting teams
+    public int countTeams() {
+        return teams.size();
+    }
+
+    //find teams
+    public
 
 }
