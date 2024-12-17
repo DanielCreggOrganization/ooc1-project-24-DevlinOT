@@ -72,6 +72,9 @@ public class Main {
             } else {
                 System.out.println("Team not found.");
             }
+        }else if(choice == 5){
+            System.out.println("Total teams: " + manager.countTeams());
+            
         }
 
 }
