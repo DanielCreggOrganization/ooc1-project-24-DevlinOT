@@ -75,6 +75,9 @@ public class Main {
         }else if(choice == 5){
             System.out.println("Total teams: " + manager.countTeams());
             
+        }else if(choice == 6){
+            System.out.println("Exiting...");
+            
         }
 
 }
