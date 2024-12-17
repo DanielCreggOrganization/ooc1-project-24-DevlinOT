@@ -68,6 +68,7 @@ public class SoccerTeam extends Team {
     @Override
     public String toString() {
         return super.toString() + ", League: " + league + ", Coach: " + coachName +
-                ", Champion: " + isChampion + ", Budget: $" + teamBudget + "M";
+                ", Champion: " + isChampion + ", Budget: $" + teamBudget + "M" +
+                ", Strength: " + calculateTeamStrength();
     }
 }

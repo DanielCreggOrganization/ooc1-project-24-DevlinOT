@@ -14,7 +14,8 @@ public class Main {
         System.out.println("3. List All Teams");
         System.out.println("4. Find Team by Name");
         System.out.println("5. Count Total Teams");
-        System.out.println("6. Exit");
+        System.out.println("6. Calculate Team Strength");
+        System.out.println("7. Exit");
 
         System.out.print("Choose an option: ");
         int choice = scanner.nextInt();
@@ -75,7 +76,16 @@ public class Main {
         }else if(choice == 5){
             System.out.println("Total teams: " + manager.countTeams());
             
-        }else if(choice == 6){
+        }else if (choice == 6) { // Calculate Team Strength
+            System.out.print("Enter team name to calculate strength: ");
+            String teamName = scanner.next();
+            SoccerTeam team = manager.findTeam(teamName);
+            if (team != null) {
+                System.out.println("Team strength for " + teamName + ": " + team.calculateTeamStrength());
+            } else {
+                System.out.println("Team not found.");
+            }
+        }else if(choice == 7){
             System.out.println("Exiting...");
             
         }else{
