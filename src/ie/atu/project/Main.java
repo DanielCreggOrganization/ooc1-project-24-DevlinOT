@@ -78,6 +78,8 @@ public class Main {
         }else if(choice == 6){
             System.out.println("Exiting...");
             
+        }else{
+            System.out.println("Invalid choice. Try again."); 
         }
 
 }
